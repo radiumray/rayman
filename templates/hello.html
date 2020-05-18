@@ -1,0 +1,28 @@
+{%extends "base.html" %}
+ 
+{% block mainbody %}
+
+<p>子类内容显示</p>
+{# hello 并现实姓名 #}
+<h1> {{ hello }} </h1>
+性别:{% if gender is True %}
+male
+{% else %}
+female
+{% endif %}
+</br>
+{% if age and health %}
+	年龄:{{ age }} 且 建康
+{% endif %}
+</br>
+受职公司:
+<ul>
+	{% for company in companyList reversed %}
+		<li>{{ company | first | upper }} -> {{ company }}</li>
+	{% endfor %}
+</ul>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,15 @@
+{%extends "base.html" %}
+ 
+{% block mainbody %}
+
+
+queryFromDB
+<form action="/queryFromDB/" method="get">
+<!-- <form action="/search/" method="get"> -->
+	<input type="text" name="q">
+	<input type="submit" value="查询">
+</form>
+
+
+{% endblock %}
+
