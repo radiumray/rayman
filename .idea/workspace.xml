@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82f6ad46-9bb9-4620-b1a5-1ed21e839b59" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/rayman/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/rayman/search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rayman.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rayman.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rayman/testdb.py" beforeDir="false" afterPath="$PROJECT_DIR$/rayman/testdb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rayman/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rayman/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rayman/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/rayman/view.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
