@@ -23,20 +23,20 @@ from . import search
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-	# url(r'^$', view.hello),
-	url('base/', view.base),
-	url('hello/', view.hello),
-	url('^addToDB/', testdb.addToDB),
-	url('^queryFromDB/', testdb.queryFromDB),
-	url('^updateToDB/', testdb.updateToDB),
-	url('^deleteToDB/', testdb.deleteToDB),
-	url('^search-form/', search.search_form),
-	url('^search/', search.search),
+    # url(r'^$', view.hello),
+    url('base/', view.base),
+    url('hello/', view.hello),
+    url('^addToDB/', testdb.addToDB),
+    url('^queryFromDB/', testdb.queryFromDB),
+    url('^updateToDB/', testdb.updateToDB),
+    url('^deleteToDB/', testdb.deleteToDB),
+    url('^search-form/', search.search_form),
+    url('^search/', search.search),
 
-	url('^addUser/', testdb.addToDBForm),
+    url('^addUser/', testdb.addToDBForm),
 
-	# (r'^postSearch/$', postSearch.search_post),
-	# url(r'^search-form/$', search.search_form),
-	# url(r'^search/$', search.search),
+    # (r'^postSearch/$', postSearch.search_post),
+    # url(r'^search-form/$', search.search_form),
+    # url(r'^search/$', search.search),
 
 ]
