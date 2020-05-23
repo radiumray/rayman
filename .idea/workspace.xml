@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="82f6ad46-9bb9-4620-b1a5-1ed21e839b59" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/rayman/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/rayman/search.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cIYJAKq0LTgfPi7OhXW6yD5FAA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82f6ad46-9bb9-4620-b1a5-1ed21e839b59" name="Default Changelist" comment="" />
+      <created>1590217499678</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590217499678</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="427" y="148" key="FileChooserDialogImpl" timestamp="1590229651385">
+      <screen x="0" y="23" width="1280" height="730" />
+    </state>
+    <state x="427" y="148" key="FileChooserDialogImpl/0.23.1280.730@0.23.1280.730" timestamp="1590229651385" />
+    <state x="141" y="25" key="SettingsEditor" timestamp="1590230027502">
+      <screen x="0" y="23" width="1280" height="730" />
+    </state>
+    <state x="141" y="25" key="SettingsEditor/0.23.1280.730@0.23.1280.730" timestamp="1590230027502" />
+  </component>
+</project>
