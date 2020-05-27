@@ -1,0 +1,24 @@
+{%extends "base.html" %}
+ 
+{% block mainbody %}
+
+
+
+<!-- {{ result }} -->
+
+
+
+
+<ul>
+	{% for perUser in resultList reversed %}
+		<li>{{ perUser.name }} -> 
+			{{ perUser.user_class }}-> 
+			{{ perUser.user_grade }}->
+			{{ perUser.user_gender }}->
+			{{ perUser.user_roleID }}->
+		</li>
+	{% endfor %}
+</ul>
+
+
+{% endblock %}

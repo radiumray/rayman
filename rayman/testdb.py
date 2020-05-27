@@ -25,7 +25,16 @@ def addToDBForm(request):
 
 		user = userInfo()
 		user.name = name
-		user.birthday = birthday
+		# user.birthday = birthday
+
+
+		user.user_pass = request.POST.get("user_pass")
+		user.user_roleID = request.POST.get("user_roleID")
+		user.user_grade = request.POST.get("user_grade")
+		user.user_class = request.POST.get("user_class")
+		user.user_gender = request.POST.get("user_gender")
+
+
 		# ok = user.save()
 		user.save()
 		# if(ok):
@@ -55,12 +64,29 @@ def queryFromDB(request):
 	# userInfo.objects.filter(name="w3cschool.cn").order_by("id")
 
 
-	response +="<ul>"
-	for person in list:
-		response += "<li>" + person.name + " " + str(person.birthday) + "</li>"
-	response +="</ul>"
+	# response +="<ul>"
+	# for person in list:
+	# 	# response += "<li>" + person.name + " " + str(person.birthday) + "</li>"
+	# 	response += "<li>"
+	# 	response += person.name + " "
+	# 	# response += str(person.birthday) + " "
+	# 	response += str(person.user_roleID) + " "
+
+	# 	response += person.user_class + " "
+	# 	response += person.user_grade + " "
+	# 	response += str(person.user_gender) + " "
+
+	# 	response += "</li>"
+
+	# response +="</ul>"
+
+	context = {}
+	context['resultList'] = list
+
 	
-	return HttpResponse("<p>"+ response +"</p>")
+	# return HttpResponse("<p>"+ response +"</p>")
+
+	return render(request,'search_result.html', context)
 
 def updateToDB(request):
 
