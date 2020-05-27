@@ -1,23 +1,22 @@
 # -*- coding: utf-8 -*-
 
 from django.http import HttpResponse
-
 from dbUsersModel.models import userInfo
 import time
 from django.shortcuts import render
 
+
 # 添加
 def addToDB(request):
-	dateTime = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-	user = userInfo(name='mmmmm', birthday=dateTime)
-	print(user.name)
-	user.save()
-	return HttpResponse("<p>数据添加成功！</p>")
+    date_time = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+    user = userInfo(name='mmmmm', birthday=date_time)
+    print(user.name)
+    user.save()
+    return HttpResponse("<p>数据添加成功！</p>")
 
 
 # 添加
 def addToDBForm(request):
-
 	if request.method == "POST":
 		# context = {}
 		name = request.POST.get("name")
@@ -48,6 +47,7 @@ def addToDBForm(request):
 
 def queryFromDB(request):
 	response = ""
+	
 	list = userInfo.objects.all()
 	# 输出所有数据
 
@@ -88,30 +88,31 @@ def queryFromDB(request):
 
 	return render(request,'search_result.html', context)
 
-def updateToDB(request):
 
-	# 修改其中一个id=1的name字段，再save，相当于SQL中的UPDATE
-	user = userInfo.objects.get(id=1)
-	user.name = 'hhhhh'
-	user.save()
-	
-	# 另外一种方式
-	#userInfo.objects.filter(id=1).update(name='hhhhhhh')
-	
-	# 修改所有的列
-	# userInfo.objects.all().update(name='hhhhhh')
-	
-	return HttpResponse("<p>修改成功</p>")
+def updateToDB(request):
+    # 修改其中一个id=1的name字段，再save，相当于SQL中的UPDATE
+    user = userInfo.objects.get(id=1)
+    user.name = 'hhhhh'
+    user.save()
+
+    # 另外一种方式
+    # userInfo.objects.filter(id=1).update(name='hhhhhhh')
+
+    # 修改所有的列
+    # userInfo.objects.all().update(name='hhhhhh')
+
+    return HttpResponse("<p>修改成功</p>")
+
 
 def deleteToDB(request):
-	# 删除id=1的数据
-	user = userInfo.objects.get(id=3)
-	user.delete()
+    # 删除id=1的数据
+    user = userInfo.objects.get(id=3)
+    user.delete()
 
-	# 另外一种方式
-	# userInfo.objects.filter(id=1).delete()
+    # 另外一种方式
+    # userInfo.objects.filter(id=1).delete()
 
-	# 删除所有数据
-	# userInfo.objects.all().delete()
+    # 删除所有数据
+    # userInfo.objects.all().delete()
 
-	return HttpResponse("<p>删除成功</p>")
+    return HttpResponse("<p>删除成功</p>")
