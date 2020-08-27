@@ -1,101 +1,101 @@
-decorator (4.4.0)
-defusedxml (0.6.0)
-dnspython (1.16.0)
-entrypoints (0.3)
-eventlet (0.24.1)
-Flask (1.0.2)
-gast (0.2.0)
-greenlet (0.4.15)
-grpcio (1.17.0)
-h5py (2.9.0)
-html5lib (0.9999999)
-idna (2.8)
-imageio (2.4.1)
-ipykernel (5.1.1)
-ipython (7.6.1)
-ipython-genutils (0.2.0)
-ipywidgets (7.5.0)
-isort (4.3.21)
-itsdangerous (1.1.0)
-jedi (0.14.1)
-Jinja2 (2.10.1)
-jsonschema (3.0.1)
-jupyter (1.0.0)
-jupyter-client (5.3.1)
-jupyter-console (6.0.0)
-jupyter-core (4.5.0)
-Keras (2.2.4)
-Keras-Applications (1.0.6)
-Keras-Preprocessing (1.0.5)
-kiwisolver (1.1.0)
-lazy-object-proxy (1.4.3)
-lxml (4.4.0)
-Markdown (3.0.1)
-MarkupSafe (1.1.1)
-matplotlib (3.1.1)
-mccabe (0.6.1)
-mistune (0.8.4)
-monotonic (1.5)
-moviepy (0.2.3.5)
-mysql-connector (2.2.9)
-nbconvert (5.5.0)
-nbformat (4.4.0)
-notebook (6.0.0)
-opencv-python (3.4.4.19)
-paho-mqtt (1.4.0)
-pandas (0.23.4)
-pandocfilters (1.4.2)
-parso (0.5.1)
-pexpect (4.7.0)
-pickleshare (0.7.5)
-Pillow (5.4.1)
-pip (9.0.1)
-prometheus-client (0.7.1)
-prompt-toolkit (2.0.9)
-protobuf (3.6.1)
-ptyprocess (0.6.0)
-pycosat (0.6.3)
-pycparser (2.18)
-pygame (1.9.4)
-Pygments (2.4.2)
-pylint (2.5.3)
-pyOpenSSL (17.5.0)
-pyparsing (2.4.2)
-PyQt5 (5.13.0)
-PyQt5-sip (4.19.18)
-pyrsistent (0.15.3)
-pyserial (3.4)
-PySocks (1.6.7)
-python-dateutil (2.8.0)
-python-engineio (3.2.3)
-python-socketio (3.1.1)
-pytz (2018.9)
-PyYAML (3.13)
-pyzmq (18.0.2)
-qtconsole (4.5.2)
-requests (2.21.0)
-ruamel-yaml (0.11.14)
-scikit-learn (0.20.3)
-scipy (1.2.1)
-Send2Trash (1.5.0)
-setuptools (41.0.1)
-six (1.15.0)
-sklearn (0.0)
-soupsieve (1.8)
-tensorboard (1.14.0)
-tensorflow (1.14.0)
-termcolor (1.1.0)
-terminado (0.8.2)
-testpath (0.4.2)
-toml (0.10.1)
-tornado (5.1.1)
-tqdm (4.29.1)
-traitlets (4.3.2)
-typed-ast (1.4.1)
-urllib3 (1.24.1)
-wcwidth (0.1.7)
-webencodings (0.5.1)
-Werkzeug (0.14.1)
-wheel (0.32.3)
-widgetsnbextension (3.5.0)
-wrapt (1.12.1)
+decorator==4.4.0
+defusedxml==0.6.0
+dnspython==1.16.0
+entrypoints==0.3
+eventlet==0.24.1
+Flask==1.0.2
+gast==0.2.0
+greenlet==0.4.15
+grpcio==1.17.0
+h5py==2.9.0
+html5lib==0.9999999
+idna==2.8
+imageio==2.4.1
+ipykernel==5.1.1
+ipython==7.6.1
+ipython-genutils==0.2.0
+ipywidgets==7.5.0
+isort==4.3.21
+itsdangerous==1.1.0
+jedi==0.14.1
+Jinja2==2.10.1
+jsonschema==3.0.1
+jupyter==1.0.0
+jupyter-client==5.3.1
+jupyter-console==6.0.0
+jupyter-core==4.5.0
+Keras==2.2.4
+Keras-Applications==1.0.6
+Keras-Preprocessing==1.0.5
+kiwisolver==1.1.0
+lazy-object-proxy==1.4.3
+lxml==4.4.0
+Markdown==3.0.1
+MarkupSafe==1.1.1
+matplotlib==3.1.1
+mccabe==0.6.1
+mistune==0.8.4
+monotonic==1.5
+moviepy==0.2.3.5
+mysql-connector==2.2.9
+nbconvert==5.5.0
+nbformat==4.4.0
+notebook==6.0.0
+opencv-python==3.4.4.19
+paho-mqtt==1.4.0
+pandas==0.23.4
+pandocfilters==1.4.2
+parso==0.5.1
+pexpect==4.7.0
+pickleshare==0.7.5
+Pillow==5.4.1
+pip==9.0.1
+prometheus-client==0.7.1
+prompt-toolkit==2.0.9
+protobuf==3.6.1
+ptyprocess==0.6.0
+pycosat==0.6.3
+pycparser==2.18
+pygame==1.9.4
+Pygments==2.4.2
+pylint==2.5.3
+pyOpenSSL==17.5.0
+pyparsing==2.4.2
+PyQt5==5.13.0
+PyQt5-sip==4.19.18
+pyrsistent==0.15.3
+pyserial==3.4
+PySocks==1.6.7
+python-dateutil==2.8.0
+python-engineio==3.2.3
+python-socketio==3.1.1
+pytz==2018.9
+PyYAML==3.13
+pyzmq==18.0.2
+qtconsole==4.5.2
+requests==2.21.0
+ruamel-yaml==0.11.14
+scikit-learn==0.20.3
+scipy==1.2.1
+Send2Trash==1.5.0
+setuptools==41.0.1
+six==1.15.0
+sklearn==0.0
+soupsieve==1.8
+tensorboard==1.14.0
+tensorflow==1.14.0
+termcolor==1.1.0
+terminado==0.8.2
+testpath==0.4.2
+toml==0.10.1
+tornado==5.1.1
+tqdm==4.29.1
+traitlets==4.3.2
+typed-ast==1.4.1
+urllib3==1.24.1
+wcwidth==0.1.7
+webencodings==0.5.1
+Werkzeug==0.14.1
+wheel==0.32.3
+widgetsnbextension==3.5.0
+wrapt==1.12.1
