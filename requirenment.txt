@@ -1,3 +1,21 @@
+absl-py==0.6.1
+asn1crypto==0.23.0
+astor==0.7.1
+astroid==2.4.2
+attrs==19.1.0
+backcall==0.1.0
+beautifulsoup4==4.7.1
+bleach==3.1.0
+bs4==0.0.1
+certifi==2018.11.29
+cffi==1.11.2
+chardet==3.0.4
+Click==7.0
+conda==4.3.31
+cryptography==2.1.4
+cycler==0.10.0
+docopt==0.6.2
+numpy==1.17.0
 decorator==4.4.0
 defusedxml==0.6.0
 dnspython==1.16.0
@@ -99,3 +117,5 @@ Werkzeug==0.14.1
 wheel==0.32.3
 widgetsnbextension==3.5.0
 wrapt==1.12.1
+
+
