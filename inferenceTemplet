@@ -1,0 +1,55 @@
+u2netInstance = U2netClass(weight, weightType)
+
+inPaintInstance = InPainting(kernelSize, inpaintRadius, flags)
+
+def main():
+
+	if(isinstance(inputSource, int) or str(inputSource).endswith('.mp4')):
+		cap = cv2.VideoCapture(inputSource)
+		if not cap.isOpened():
+			print('Failed to open')
+		cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+
+		while cap.isOpened():
+			ret, frame = cap.read()
+			if not ret:
+				break
+
+			cv2.imshow('ori', frame)
+
+			mask, resultImg = inferenceProcess(frame)
+
+			cv2.imshow('mask', mask)
+			cv2.imshow('resultImg', resultImg)
+
+			key = cv2.waitKey(1)
+			if key == 27:
+				break
+
+		cv2.destroyAllWindows()
+		cap.release()
+
+
+	else:
+		ori_img = cv2.imread(inputSource)
+		cv2.imshow('ori', ori_img)
+
+		mask, resultImg = inferenceProcess(ori_img)
+
+		cv2.imshow('resultImg', resultImg)
+
+		cv2.imshow('out', mask)
+		cv2.waitKey(0)
+
+
+
+
+def inferenceProcess(frame):
+	mask = u2netInstance.inference(frame)
+	resultImg = inPaintInstance.inpaint(frame, mask)
+	return mask, resultImg
+
+
+
+if __name__ == "__main__":
+    main()
