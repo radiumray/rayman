@@ -1,4 +1,6 @@
 
+```py
+
 '''
 import numpy as np
 from matplotlib import pyplot as plt
@@ -101,3 +103,5 @@ plt.plot(theat,Ic)
 plt.grid(ls="--")
 
 plt.show()
+
+```
