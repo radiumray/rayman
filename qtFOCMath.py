@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
@@ -58,12 +57,19 @@ class Example(QWidget):
 
         self.label_iq = QLabel('Iq:', self)
         self.label_iq.setAlignment(Qt.AlignRight)
-
         self.spinBox_iq = QDoubleSpinBox(self)
         self.spinBox_iq.setValue(self.foc.get_iq())
         self.spinBox_iq.setSingleStep(0.1)
         self.spinBox_iq.setMinimum(-2)
         self.spinBox_iq.setMaximum(2)
+
+        self.label_id = QLabel('Id:', self)
+        self.label_id.setAlignment(Qt.AlignRight)
+        self.spinBox_id = QDoubleSpinBox(self)
+        self.spinBox_id.setValue(self.foc.get_id())
+        self.spinBox_id.setSingleStep(0.1)
+        self.spinBox_id.setMinimum(-2)
+        self.spinBox_id.setMaximum(2)
 
         self.sldChangeV = QSlider(Qt.Horizontal, self)
         self.sldChangeV.setValue(self.foc.get_speed())
@@ -76,11 +82,9 @@ class Example(QWidget):
 
         self.label = QLabel('0', self)
 
-
         self.mode_button = QPushButton('Speed', self)
         self.mode_button.setCheckable(True)
         self.mode_button.clicked[bool].connect(self.setMode)
-
 
         self.canvas = MyMplCanvas(self, width=screen_width, height=screen_height, dpi=screen_dpi)
 
@@ -96,6 +100,9 @@ class Example(QWidget):
         hbox.addWidget(self.label_iq)
         hbox.addWidget(self.spinBox_iq)
 
+        hbox.addWidget(self.label_id)
+        hbox.addWidget(self.spinBox_id)
+
         vbox.addWidget(self.mode_button)
 
         vbox.addWidget(self.groupboxPID)
@@ -109,7 +116,7 @@ class Example(QWidget):
         self.setLayout(vbox)
 
         self.spinBox_iq.valueChanged.connect(self.change_iq)
-
+        self.spinBox_id.valueChanged.connect(self.change_id)
         self.sldChangeV.valueChanged.connect(self.update_speed)
 
         self.x = np.linspace(0, screen_width, sample_num)
@@ -153,6 +160,10 @@ class Example(QWidget):
     def change_iq(self):
         iq_value = self.spinBox_iq.value()
         self.foc.set_iq(iq_value)
+
+    def change_id(self):
+        id_value = self.spinBox_id.value()
+        self.foc.set_id(id_value)
 
     def update_speed(self, i):
         self.appendSpeed = int(i * 10 / 100)
@@ -199,4 +210,3 @@ if __name__ == '__main__':
     ani = FuncAnimation(ex.canvas.figure, ex.update_line,
                         blit=True, interval=25)
     sys.exit(app.exec_())
-
