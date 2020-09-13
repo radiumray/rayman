@@ -1,4 +1,10 @@
+
+# 开环设置
+
+
 ```py
+
+# 固件版本v3.6
 
 odrv0.erase_configuration()
 
