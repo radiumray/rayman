@@ -135,6 +135,45 @@ void receiveUserCommand() {
 
 ```py
 
+import serial
+import time
 
+# dev_fn = '/dev/ttyACM0'
+dev_fn = '/dev/ttyUSB0'
+bandRate = 115200
+
+ser = serial.Serial(dev_fn, bandRate, timeout=1)
+# ser = serial.Serial(dev_fn, bandRate, timeout=1, stopbits=serial.STOPBITS_ONE, parity=serial.PARITY_NONE, bytesize=serial.EIGHTBITS)
+
+angle = 180
+threel = 10
+ram = 50
+
+
+def hhh(angle, threel, ram):
+
+    send_list = []
+    send_list.append(0xff)
+    send_list.append(0xd8)
+    send_list.append(angle)
+    send_list.append(threel)
+    send_list.append(ram)
+    send_list.append(0xd9)
+    send_list.append(0x00)
+
+    print(send_list)
+
+    # input_s = bytes()
+    # print(input_s)
+    # num = ser.write(input_s)send_list
+    # print(num)
+    ser.write(serial.to_bytes(send_list))
+
+
+for i in range(2):
+    hhh(0, 0, 0)
+    time.sleep(1)
+
+hhh(0, threel, ram)
 
 ```
