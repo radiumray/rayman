@@ -1,6 +1,79 @@
 
 https://thepi.io/how-to-use-your-raspberry-pi-as-a-wireless-access-point/
 
+
+```bash
+
+1：更新
+sudo apt-get update
+sudo apt-get upgrade
+
+2：安装dnsmasq和hostapd
+sudo apt-get install dnsmasq hostapd
+
+3：停止服务
+sudo systemctl stop dnsmasq
+sudo systemctl stop hostapd
+
+4：配置热点的IP地址
+sudo nano /etc/dhcpcd.conf
+在最下边加入:
+interface wlan0
+    static ip_address=192.168.4.1/24
+    nohook wpa_supplicant
+
+5：启动服务：
+sudo service dhcpcd restart
+
+6：备份之前的配置文件，修改dnsmasq.conf
+sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig  
+sudo nano /etc/dnsmasq.conf
+加入：
+interface=wlan0      # Use the require wireless interface - usually wlan0
+  dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
+
+7：修改hostapd.conf
+sudo nano /etc/hostapd/hostapd.conf
+加入：
+interface=wlan0
+driver=nl80211
+ssid=NameOfNetwork
+hw_mode=g
+channel=7
+wmm_enabled=0
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=2
+wpa_passphrase=12345678
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+
+8：修改hostapd
+sudo nano /etc/default/hostapd
+找到#DAEMON_CONF修改为：
+DAEMON_CONF="/etc/hostapd/hostapd.conf"
+
+9：启动服务
+sudo systemctl start hostapd
+sudo systemctl start dnsmasq
+
+
+
+
+
+
+
+
+```
+
+
+
+
+
+
+
 ```bash
 
 sudo apt-get update
