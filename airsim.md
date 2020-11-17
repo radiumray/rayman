@@ -1,3 +1,7 @@
+参考：
+https://blog.csdn.net/MangoHHHH/article/details/107215512
+https://microsoft.github.io/AirSim/build_linux/
+
 1. 编译虚幻引擎
 ```bash
 
