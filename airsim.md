@@ -72,6 +72,8 @@ Airsim.exe -WINDOWED -ResX=640 -ResY=480
 ```python
 
 
+# ready to run example: PythonClient/car/hello_car.py
+
 import airsim
 import time
 import tempfile
@@ -81,9 +83,11 @@ import cv2
 
 
 # connect to the AirSim simulator
-client = airsim.CarClient()
+client = airsim.CarClient(ip="172.32.5.168")
 client.confirmConnection()
 client.enableApiControl(True)
+
+
 print("API Control enabled: %s" % client.isApiControlEnabled())
 car_controls = airsim.CarControls()
 
@@ -106,15 +110,23 @@ while True:
     car_state = client.getCarState()
     print("Speed %d, Gear %d" % (car_state.speed, car_state.gear))
 
+
+    # gps_data =  client.getGpsData()
+    x = client.simGetVehiclePose().position.x_val
+    y = client.simGetVehiclePose().position.y_val
+    z = client.simGetVehiclePose().position.z_val
+    print('x: {} y: {} z: {}'.format(x, y, z))
+
+
     # set the controls for car
     car_controls.throttle = 1
-    car_controls.steering = 1
+    # car_controls.steering = 1
     client.setCarControls(car_controls)
 
     # let car drive a bit
     time.sleep(0.1)
     responses = client.simGetImages([
-        airsim.ImageRequest("0", airsim.ImageType.DepthVis), # 
+        airsim.ImageRequest("0", airsim.ImageType.DepthVis, False, False), # 
         # airsim.ImageRequest("1", airsim.ImageType.DepthPerspective, True),
         # airsim.ImageRequest("1", airsim.ImageType.Scene),
         airsim.ImageRequest("1", airsim.ImageType.Scene, False, False),
@@ -126,13 +138,17 @@ while True:
 
         # 深度图像
         if response.image_type == airsim.ImageType.DepthVis:
+            print('compress:', response.compress)
             print('depth:')
+
             img1d = np.fromstring(response.image_data_uint8, dtype=np.uint8)
+            img_gray = img1d.reshape(response.height, response.width, 3)
             print(img1d.shape)
+            cv2.imshow('ddd', img_gray)
 
         # 原始图像
         elif response.image_type == airsim.ImageType.Scene:
-            print("Type %d, size %d" % (response.image_type, len(response.image_data_uint8)))
+            # print("Type %d, size %d" % (response.image_type, len(response.image_data_uint8)))
             img1d = np.fromstring(response.image_data_uint8, dtype=np.uint8) # get numpy array
             img_rgb = img1d.reshape(response.height, response.width, 3) # reshape array to 3 channel image array H X W X 3
             print(img_rgb.shape)
@@ -154,6 +170,7 @@ cv2.destroyAllWindows()
 client.reset()
 
 client.enableApiControl(False)
+
 
 
 ```
