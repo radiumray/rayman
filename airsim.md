@@ -205,7 +205,7 @@ airsim settings.json配置
 	  },
 
 
-
+	//测试目标检测地点
 	"Vehicles": {
 		"Car1": {
 		  "VehicleType": "PhysXCar",
@@ -217,6 +217,18 @@ airsim settings.json配置
 		  "Yaw": -90
 
 		}
+	}
+	
+	//测试车道线地点
+	"Vehicles": {
+	"Car1": {
+	  "VehicleType": "PhysXCar",
+	  "X": 49.7876,
+	  "Y": 207.6644,
+	  "Z": 1.3796,
+	  "Pitch": 0, 
+	  "Roll": 0, 
+	  "Yaw": 0
 	}
 
 }
