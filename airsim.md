@@ -65,7 +65,7 @@ cp /home/lizaozao/Desktop/car_assets.zip  car_assets.zip
 ```bash
 ./CityEnviron.sh -ResX=640 -ResY=480 -windowed
 
-Airsim.exe -WINDOWED -ResX=640 -ResY=480
+CityEnviron.exe -WINDOWED -ResX=640 -ResY=480
 ```
 
 
