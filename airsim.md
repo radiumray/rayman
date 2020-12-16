@@ -9,6 +9,77 @@ CityEnviron.exe -WINDOWED -ResX=640 -ResY=480
 ```
 
 
+## airsim settings.json配置
+
+```bash
+
+#存储位置：
+# windows：
+# C:\Users\24036\Documents\AirSim\settings.json
+
+{
+	"SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
+	"SettingsVersion": 1.2, 
+	"SimMode": "Car",
+	"LogMessagesVisible": true,
+
+	"CameraDefaults": {
+	    "CaptureSettings": [
+	      {
+	        "ImageType": 0,
+	        "Width": 384,
+	        "Height": 216,
+	        "FOV_Degrees": 90,
+	        "AutoExposureSpeed": 100,
+	        "AutoExposureBias": 0,
+	        "AutoExposureMaxBrightness": 0.64,
+	        "AutoExposureMinBrightness": 0.03,
+	        "MotionBlurAmount": 0,
+	        "TargetGamma": 1.0,
+	        "ProjectionMode": "",
+	        "OrthoWidth": 5.12
+	      }
+	    ]
+
+	  },
+
+
+	//测试目标检测地点
+	"Vehicles": {
+		"Car1": {
+		  "VehicleType": "PhysXCar",
+		  "X": 17.24,
+		  "Y": -170,
+		  "Z": 0,
+		  "Pitch": 0, 
+		  "Roll": 0, 
+		  "Yaw": -90
+
+		}
+	}
+	
+	//测试车道线地点
+	"Vehicles": {
+	"Car1": {
+	  "VehicleType": "PhysXCar",
+	  "X": 49.7876,
+	  "Y": 207.6644,
+	  "Z": 1.3796,
+	  "Pitch": 0, 
+	  "Roll": 0, 
+	  "Yaw": 0
+	}
+
+}
+
+
+```
+
+
+
+
+
+
 ## 控制脚本
 ```python
 
@@ -116,71 +187,7 @@ client.enableApiControl(False)
 
 ```
 
-## airsim settings.json配置
 
-```bash
-
-#存储位置：
-# windows：
-# C:\Users\24036\Documents\AirSim
-
-{
-	"SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
-	"SettingsVersion": 1.2, 
-	"SimMode": "Car",
-	"LogMessagesVisible": true,
-
-	"CameraDefaults": {
-	    "CaptureSettings": [
-	      {
-	        "ImageType": 0,
-	        "Width": 384,
-	        "Height": 216,
-	        "FOV_Degrees": 90,
-	        "AutoExposureSpeed": 100,
-	        "AutoExposureBias": 0,
-	        "AutoExposureMaxBrightness": 0.64,
-	        "AutoExposureMinBrightness": 0.03,
-	        "MotionBlurAmount": 0,
-	        "TargetGamma": 1.0,
-	        "ProjectionMode": "",
-	        "OrthoWidth": 5.12
-	      }
-	    ]
-
-	  },
-
-
-	//测试目标检测地点
-	"Vehicles": {
-		"Car1": {
-		  "VehicleType": "PhysXCar",
-		  "X": 17.24,
-		  "Y": -170,
-		  "Z": 0,
-		  "Pitch": 0, 
-		  "Roll": 0, 
-		  "Yaw": -90
-
-		}
-	}
-	
-	//测试车道线地点
-	"Vehicles": {
-	"Car1": {
-	  "VehicleType": "PhysXCar",
-	  "X": 49.7876,
-	  "Y": 207.6644,
-	  "Z": 1.3796,
-	  "Pitch": 0, 
-	  "Roll": 0, 
-	  "Yaw": 0
-	}
-
-}
-
-
-```
 
 
 
