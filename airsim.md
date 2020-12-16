@@ -116,8 +116,13 @@ client.enableApiControl(False)
 
 ```
 
-airsim settings.json配置
+## airsim settings.json配置
+
 ```bash
+
+#存储位置：
+# windows：
+# C:\Users\24036\Documents\AirSim
 
 {
 	"SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
