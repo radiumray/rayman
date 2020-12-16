@@ -1,12 +1,15 @@
 
-
+## 启动命令
 ```bash
+# ubuntu版本
 ./CityEnviron.sh -ResX=640 -ResY=480 -windowed
 
+# windows版本
 CityEnviron.exe -WINDOWED -ResX=640 -ResY=480
 ```
 
 
+## 控制脚本
 ```python
 
 
