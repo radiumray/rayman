@@ -16,9 +16,9 @@ CityEnviron.exe -WINDOWED -ResX=640 -ResY=480
 
 ```bash
 
-#存储位置：
-# windows：
-# C:\Users\24036\Documents\AirSim\settings.json
+# 存储位置：
+# windows：C:\Users\24036\Documents\AirSim\settings.json
+# ubuntu: /home/ray/Documents/AirSim/settings.json
 
 {
 	"SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
