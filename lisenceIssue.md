@@ -4,6 +4,9 @@
 ```bash
 
 
+# 加密解密：
+https://pypi.org/project/akbase2233/
+
 
 
 # python打包：py2exe, pyinstall, cx_Freeze, nuitka
