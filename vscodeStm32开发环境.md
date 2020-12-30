@@ -15,3 +15,9 @@ sudo apt install openocd
 sudo apt install default-jre
 sudo apt install gcc-arm-none-eabi
 
+sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
+sudo apt-get update
+sudo apt-get install gcc-arm-embedded
+sudo apt-get install openocd
+sudo add-apt-repository ppa:jonathonf/tup && sudo apt-get update && sudo apt-get install tup
+
