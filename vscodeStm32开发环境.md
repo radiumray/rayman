@@ -2,6 +2,8 @@
 
 ```bash
 
+https://hbfsrobotics.com/blog/configuring-vs-code-arm-development-stm32cubemx
+
 # odriver 参考：
 https://blog.csdn.net/abf1234444/article/details/103366622
 
