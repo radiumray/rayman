@@ -4,7 +4,7 @@
 
 
 
-printf重定向：
+# printf重定向：
 ```c++
 #ifdef __GNUC__
 /* With GCC, small printf (option LD Linker->Libraries->Small printf
@@ -29,13 +29,13 @@ PUTCHAR_PROTOTYPE
 }
 ```
 
-解决浮点问题：
+# 解决浮点问题：
 
 在CMAKELIST.txt中添加在    此处最后加上-u _printf_float
 
 https://blog.csdn.net/qq_43715171/article/details/117776784
 
-测试代码：
+# 测试代码：
 ```C++
 printf("Characters: %c %c\n", 'a', 65);
 printf("Decimals: %d %ld\n", 1977, 650000L);
