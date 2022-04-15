@@ -5,7 +5,7 @@
 
 
 printf重定向：
-···c++
+```c++
 #ifdef __GNUC__
 /* With GCC, small printf (option LD Linker->Libraries->Small printf
    set to 'Yes') calls __io_putchar() */
@@ -27,7 +27,7 @@ PUTCHAR_PROTOTYPE
 
     return ch;
 }
-···
+```
 
 解决浮点问题：
 
