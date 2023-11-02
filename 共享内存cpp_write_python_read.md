@@ -128,3 +128,64 @@ while True:
 shm.detach()
 
 ```
+
+# cpp read:
+
+```c++
+
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/shm.h>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <iostream>
+ 
+
+#define IMAGE_SIZE 640*480*3 //图片大小
+using namespace std;
+ 
+ 
+typedef struct _BOX
+{
+	int  flag;
+	char ch[IMAGE_SIZE];
+}Box;
+
+int main()
+{
+	int shmid = shmget((key_t)1275, sizeof(Box), 0666|IPC_CREAT);
+	void *shm = shmat(shmid, (void*)0, 0);
+	Box *pBox = (Box*)shm;
+         size_t sizeofbuf;
+
+	while(1)
+	{
+		// if(pBox->flag == 1)
+		// {
+			
+                        cv::Mat cvoutImg = cv::Mat(480,640,CV_8UC3,cv::Scalar(0, 0, 0));//bufHight,bufWidth
+                        int size = cvoutImg.cols * cvoutImg.rows * cvoutImg.channels();
+                        
+                        memcpy((char*)cvoutImg.data, pBox->ch,size);
+                        cv::imshow("read...",cvoutImg);
+
+                        // std::cerr << "cvoutImg::" <<  (cvoutImg) << std::endl;
+
+
+                        int key = cv::waitKey(30);
+
+                        if (key == 'q') {
+                            break;
+                        }
+		// 	pBox->flag = 0;
+		// }       
+	}
+	
+	shmdt(shm);
+	shmctl(shmid, IPC_RMID, 0);
+	return 0;
+} 
+
+```
